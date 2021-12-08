@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Update <%= @task.title %></h1>
+  <%= form_for(@task) do |t| %>
+  <h3>Title</h3>
+  <%= t.text_field :title%>
+  <h4>Details</h4>
+  <%= t.text_field :details %>
+  <p><%= @task.completed ? '●' : '○' %> This task is completed</p>
+  <%= t.submit %>
+  <% end %>
+</div>
